@@ -60,7 +60,9 @@ If you find Faster R-CNN useful in your research, please consider citing:
   ```
 
   You can download my [Makefile.config](https://dl.dropboxusercontent.com/s/6joa55k64xo2h68/Makefile.config?dl=0) for reference.
-2. Python packages you might not have: `cython`, `python-opencv`, `easydict`
+  
+2. Python packages you might not have: `cython`, `opencv-python`, `easydict`, `pyyaml`
+
 3. [Optional] MATLAB is required for **official** PASCAL VOC evaluation only. The code now includes unofficial Python evaluation code.
 
 ### Requirements: hardware
@@ -96,13 +98,10 @@ If you find Faster R-CNN useful in your research, please consider citing:
 4. Build Caffe and pycaffe
     ```Shell
     cd $FRCN_ROOT/caffe-fast-rcnn
-    # Now follow the Caffe installation instructions here:
-    #   http://caffe.berkeleyvision.org/installation.html
-
-    # If you're experienced with Caffe and have all of the requirements installed
-    # and your Makefile.config in place, then simply do:
+    cp Makefile.config.example Makefile.config
     make -j8 && make pycaffe
     ```
+    > Notice tip 1 on `Requirements: software`
 
 5. Download pre-computed Faster R-CNN detectors
     ```Shell
